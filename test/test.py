@@ -29,8 +29,8 @@ async def test_project(dut):
     dut.ui_in.value = 162      # a = 2, b = 10
     dut.uio_in.value = 0       #ci = 0
 
-    # Wait for one clock cycle to see the output values
-    await ClockCycles(dut.clk, 1)
+    # Wait for two clock cycle to see the output values
+    await ClockCycles(dut.clk, 2)
 
     # The following assersion is just an example of how to check the output values.
     # Change it to match the actual expected output of your module:
@@ -39,17 +39,17 @@ async def test_project(dut):
         
     dut.ui_in.value = 162      # a = 2, b = 10
     dut.uio_in.value = 1       #ci = 1
-    await ClockCycles(dut.clk, 1)
+    await ClockCycles(dut.clk, 2)
     assert dut.uo_out.value == 13
     
     dut.ui_in.value = 166      # a = 6, b = 10
     dut.uio_in.value = 0       #ci = 0
-    await ClockCycles(dut.clk, 1)
+    await ClockCycles(dut.clk, 2)
     assert dut.uo_out.value == 16
     
     dut.ui_in.value = 226      # a = 2, b = 14
     dut.uio_in.value = 1       #ci = 0
-    await ClockCycles(dut.clk, 1)
+    await ClockCycles(dut.clk, 2)
     assert dut.uo_out.value == 17
     
 
