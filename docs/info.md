@@ -9,12 +9,18 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-Explain how your project works
+This is a 4-bit CLA. It can be used to construct the adder with higher bit.
 
 ## How to test
 
-Explain how to use your project
+The design has 3 input ports: a, b and ci
+It has 2 output ports: s and co
+a: an addend.
+b: the other addend.
+ci: the carry signal for the input.
+s: the output sum.
+co: the carry signal for the output.
 
 ## External hardware
 
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
+This project was tested by an U250 FPGA.
